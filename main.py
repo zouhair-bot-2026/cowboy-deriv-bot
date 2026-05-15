@@ -3,7 +3,6 @@ import logging
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-# Logging باش تشوف الأخطاء في Railway
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
@@ -21,7 +20,6 @@ async def main():
         raise ValueError("TELEGRAM_TOKEN مش موجود في Variables")
     
     app = Application.builder().token(TOKEN).build()
-    
     app.add_handler(CommandHandler("start", start))
     
     print("Bot running...")
