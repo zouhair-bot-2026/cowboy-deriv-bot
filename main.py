@@ -9,7 +9,6 @@ logging.basicConfig(
 )
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("البوت يخدم 100% ✅")
